@@ -1,3 +1,21 @@
-Very simple scala AI for http://vindinium.org
+open source AI for http://vindinium.org/
 
-The AI is contained in the [Wolfie.scala file](https://github.com/ornicar/wolfie/blob/master/src/main/scala/Wolfie.scala).
+---
+
+**Loupiot** is a fork of [Wolfie](https://github.com/ornicar/wolfie)
+with basic Genetic Learning features.
+
+
+How to use
+---
+
+First you will need the learning server I've wrote:
+
+```bash
+npm install -g genetic-server
+```
+
+Then you can run it like this:
+```
+genetic-server -c genetic-server-config.json
+```

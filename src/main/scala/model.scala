@@ -1,4 +1,4 @@
-package vindinium.wolfie
+package vindinium.loupiot
 
 object Dir extends Enumeration {
   type Dir = Value
@@ -48,6 +48,7 @@ case class Hero(
     id: Int,
     name: String,
     pos: Pos,
+    elo: Option[Int],
     life: Int,
     gold: Int,
     mineCount: Int,

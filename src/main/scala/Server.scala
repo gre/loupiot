@@ -1,4 +1,4 @@
-package vindinium.wolfie
+package vindinium.loupiot
 
 import play.api.libs.json._
 import scalaj.http.{ Http, HttpOptions }

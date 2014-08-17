@@ -1,10 +1,10 @@
-package vindinium.wolfie
+package vindinium.loupiot
 
 object Main {
 
   val key = "???"
 
-  val bot = new Wolfie
+  val bot = new Loupiot
 
   val measurePerf = true
   var times = collection.mutable.ListBuffer[Int]()
