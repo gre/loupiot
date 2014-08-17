@@ -15,7 +15,21 @@ First you will need the learning server I've wrote:
 npm install -g genetic-server
 ```
 
-Then you can run it like this:
+and run it like this:
 ```
 genetic-server -c genetic-server-config.json
 ```
+
+Then you can run Loupiot in Arena by using the vindinium start:
+```
+sbt -Dkey=YOURKEY "run arena"
+```
+
+How does this work?
+---
+
+Each time a new game starts,
+Loupiot tell the current score (the hero Elo) to the Learning Server,
+this Learning Server respond with a new set of parameters to use for the game.
+
+The Learning Server is doing some random mutation of parameters (with various mutationRates and generationDuration) and aggregate the knowledge in a ".data-loupiot.json" file.
