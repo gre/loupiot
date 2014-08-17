@@ -98,9 +98,14 @@ class Loupiot extends LearningServer {
     def goMine = if (hero.life + mineLife + minePath.size * dayLife > config("mine")) Some(minePath) else None
 
     def attackable(enemy: Hero, distance: Int) = {
-      enemy.mineCount > config("minEnemyMineCount") &&
+      def wonFight = distance < 3 && enemy.life < hero.life
+      def safePrey = enemy.mineCount > 0 &&
+        (Set(1, 2, 4, 5) contains distance) &&
+        (enemy.life + defendLife) < hero.life
+      def wealthyPrey = enemy.mineCount > config("minEnemyMineCount") &&
       distance < config("attackDistance") &&
       (enemy.life + defendLife) < hero.life
+      safePrey || wealthyPrey
     }
 
     val path =
